@@ -1,0 +1,15 @@
+
+gsquid:S1192H"KDefine a constant instead of duplicating this literal "updated_at" 3 times.(Îë•ïøÿÿÿÿ
+wsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Œ»áïùÿÿÿÿ
+Hsquid:S1068"1Remove this unused "DATABASE_NAME" private field.(õºè°
+gsquid:CommentedOutCodeLine1"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+gsquid:S1192F"KDefine a constant instead of duplicating this literal "deleted_at" 3 times.(ø—þùÿÿÿÿ
+csquid:S1192P"GDefine a constant instead of duplicating this literal "Error " 3 times.(ßÃÆÔþÿÿÿÿ
+asquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(¤¢«{
+osquid:S1192M"SDefine a constant instead of duplicating this literal "Database Insertion" 6 times.(øÔ‚”üÿÿÿÿ
+gsquid:S1192G"KDefine a constant instead of duplicating this literal "created_at" 3 times.(ôò¥Øøÿÿÿÿ
+Psquid:S1068"4Remove this unused "DATABASE_VERSION" private field.(‰Ãîßÿÿÿÿÿ
+bsquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(ŸÚ„
+gsquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(›ÿ±ûÿÿÿÿ
+gsquid:CommentedOutCodeLine~"<This block of commented-out lines of code should be removed.(°çÁÿÿÿÿÿ
+Lsquid:S1068"0Remove this unused "TABLE_GAME_i" private field.(Œ»áïùÿÿÿÿ
