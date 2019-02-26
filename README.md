@@ -4,7 +4,7 @@ FoxyAuth is a library that generates an E-Mobadara authentication page for .
 
 ## Requirements
 - minSdkVersion 17+
-- compileSdkVersion 28
+- compileSdkVersion 26
 
 
 ## How to
