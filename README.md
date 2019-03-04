@@ -38,3 +38,6 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 
 Replace MainActivity with the first activity that runs on your App.
+
+## Having an issue?
+please Open an issue in the Issue tab and provide a way to reproduce the bug. A link to your repo would be nice.Or even a code snippet. We are counting on your collaboration. 
