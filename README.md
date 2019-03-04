@@ -39,5 +39,26 @@ protected void onCreate(Bundle savedInstanceState) {
 
 Replace MainActivity with the first activity that runs on your App.
 
+## Adding new game stat (Game_Infos)
+to store a new game registry you can create an instance of the object GameStat
+```
+GameStat gameStat = new GameStat();
+
+        gameStat.setApp_id("a");
+        gameStat.setExercise_id("a");
+        gameStat.setLevel_id("a");
+        gameStat.setUpdated_at("a");
+        gameStat.setCreated_at("a");
+        gameStat.setGame_date_id("a");
+        gameStat.setSuccessful_attempts("a");
+        gameStat.setFailed_attempts("a");
+        gameStat.setMin_time_succeed_sec("a");
+        gameStat.setAvg_time_succeed_sec("a");
+        gameStat.setLongitude("a");
+        gameStat.setLatitude("a");
+        gameStat.setDevice("a");
+        gameStat.setFlag("a");
+        FoxyAuth.storeGameStat(this,gameStat);
+```
 ## Having an issue?
 please Open an issue in the Issue tab and provide a way to reproduce the bug. A link to your repo would be nice.Or even a code snippet. We are counting on your collaboration. 
