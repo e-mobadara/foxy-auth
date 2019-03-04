@@ -1,13 +1,11 @@
 
-gsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(Â™†úÿÿÿÿ
-isquid:S00117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÅ€
-Hsquid:S1068",Remove this unused "mContext" private field.(»úÅ¾øÿÿÿÿ
-bsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(žéš¼
-gsquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.(í¦ÈÞþÿÿÿÿ
-_squid:UnusedPrivateMethodR";Remove this unused private "getSecondaryAPIService" method.(Œ¾¤
-gsquid:CommentedOutCodeLineb"<This block of commented-out lines of code should be removed.(Áÿì³úÿÿÿÿ
-gsquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(‰¡½ˆþÿÿÿÿ
 Ksquid:S1068"4Remove this unused "mContextFragment" private field.(îÅóñ
-^$squid:AssignmentInSubExpressionCheck*".Extract the assignment out of this expression.(¦œÛÛ
-gsquid:CommentedOutCodeLine8"<This block of commented-out lines of code should be removed.(å¤ ùÿÿÿÿ
-gsquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(œ±‹Üüÿÿÿÿ
+Hsquid:S1068",Remove this unused "mContext" private field.(»úÅ¾øÿÿÿÿ
+gsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(å¤ ùÿÿÿÿ
+gsquid:CommentedOutCodeLine-"<This block of commented-out lines of code should be removed.(œ±‹Üüÿÿÿÿ
+_squid:UnusedPrivateMethodL";Remove this unused private "getSecondaryAPIService" method.(Œ¾¤
+bsquid:CommentedOutCodeLine*"<This block of commented-out lines of code should be removed.(žéš¼
+^$squid:AssignmentInSubExpressionCheck$".Extract the assignment out of this expression.(¦œÛÛ
+isquid:S00117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÅ€
+gsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(Â™†úÿÿÿÿ
+gsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(í¦ÈÞþÿÿÿÿ

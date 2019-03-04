@@ -8,9 +8,13 @@ import android.util.Log;
 
 import com.example.ensias_auth_library.models.Assignments;
 import com.example.ensias_auth_library.models.Enrollment;
+import com.example.ensias_auth_library.models.GameStat;
 import com.example.ensias_auth_library.models.Organisation;
 
 import java.util.List;
+
+import static android.content.Context.MODE_PRIVATE;
+import static com.example.ensias_auth_library.utils.AppConstants.TABLE_GAME_STATS;
 
 /**
  * Created by younes on 8/19/2018.
@@ -21,15 +25,10 @@ public class DatabaseManager {
     private static DatabaseManager mDatabaseManager;
     private SQLiteDatabase mDatabase;
     Context mContext;
-    SQLiteDatabase db;
     Cursor authentificationDataCursor;
-    // Database Version
-    private static final int DATABASE_VERSION = 1;
-    // Database Name
-    private static final String DATABASE_NAME = "Game";
-    // Table name
-    private static final String TABLE_GAME_i = "Game_Infos";
-    DatabaseManager(Context context){
+    SQLiteDatabase db;
+
+    public DatabaseManager(Context context){
         mContext = context;
         mDBHelper = DatabaseHelper.getInstance(context);
         mDatabase  = mDBHelper.getWritableDatabase();
@@ -40,18 +39,6 @@ public class DatabaseManager {
         }
         return mDatabaseManager;
     }
-//    private DatabaseHelper mDBHelper;
-//    private SQLiteDatabase mDatabase;
-
-//    DatabaseManager(Context context){
-//        mContext = context;
-//        mDatabase =
-//    }
-
-//create table if not exists Organisations (id_Organisation INTEGER NOT NULL,name_organisation TEXT NOT NULL);
-//create table if not exists Kid (id_kid INTEGER NOT NULL,name_kid TEXT NOT NULL);
-//    }
-/// Storing Organisations Data In LocalDB
 
 public void storeOrganisations(List<Organisation> organisationList){
     for(Organisation organisation: organisationList )
@@ -143,5 +130,41 @@ public void storeOrganisations(List<Organisation> organisationList){
                 Log.e("Database Insertion", "Error " + e.getCause() + " " + e.getMessage());
             }
         }
+    }
+    public void storeGameStat(GameStat gameStat){
+        ContentValues gameStatRow = new ContentValues();
+        gameStatRow.put("id_application", gameStat.getApp_id());
+        gameStatRow.put("id_apprenant", gameStat.getChild_id());
+        gameStatRow.put("id_accompagnant", gameStat.getUser_id());
+        gameStatRow.put("id_exercice", gameStat.getExercise_id());
+        gameStatRow.put("id_niveau", gameStat.getLevel_id());
+        gameStatRow.put("date_actuelle", gameStat.getUpdated_at());
+        gameStatRow.put("heure_debut", gameStat.getCreated_at());
+        gameStatRow.put("heure_fin", gameStat.getUpdated_at());
+        gameStatRow.put("Nombre_operation_reuss", gameStat.getSuccessful_attempts());
+        gameStatRow.put("Nombre_operation_echou", gameStat.getFailed_attempts());
+        gameStatRow.put("minimum_temps_operation_sec", gameStat.getMin_time_succeed_sec());
+        gameStatRow.put("moyen_temps_operation_sec", gameStat.getAvg_time_succeed_sec());
+        gameStatRow.put("longitude", gameStat.getLongitude());
+        gameStatRow.put("latitude", gameStat.getLatitude());
+        gameStatRow.put("device", gameStat.getDevice());
+        gameStatRow.put("flag", gameStat.getFlag());
+
+        try {
+            mDatabase.insertOrThrow(TABLE_GAME_STATS, null, gameStatRow);
+            Log.e("Database Insertion", "Game ("+ gameStat.getApp_id()+") Added");
+
+        } catch (Exception e) {
+            Log.e("Database Insertion", "Game Error " + e.getCause() + " " + e.getMessage());
+        }
+    }
+    public int gameStatsRowCount (){
+        int rowsNumber;
+        db = mContext.openOrCreateDatabase("Game", MODE_PRIVATE,null);
+        authentificationDataCursor = db.rawQuery("SELECT COUNT(*) FROM "+TABLE_GAME_STATS,null);
+        authentificationDataCursor.moveToFirst();
+        rowsNumber = authentificationDataCursor.getInt(0);
+        db.close();
+        return rowsNumber;
     }
 }

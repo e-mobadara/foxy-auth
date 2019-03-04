@@ -1,0 +1,6 @@
+
+]squid:S1118":Add a private constructor to hide the implicit public one.(ŸÖÃ÷üÿÿÿÿ8ÙŠ½Üğ,
+[squid:S1444	"8Make this "public static authIsAlreadyShown" field final(Çà§Øıÿÿÿÿ8¨¶ÍÜğ,
+Ysquid:S1444"6Make this "public static mainActivityName" field final(èìñùÿÿÿÿ8ÙŠ½Üğ,
+˜"squid:ClassVariableVisibilityCheck	"^Make authIsAlreadyShown a static final constant or non-public and provide accessors if needed.(Çà§Øıÿÿÿÿ8¨¶ÍÜğ,
+–"squid:ClassVariableVisibilityCheck"\Make mainActivityName a static final constant or non-public and provide accessors if needed.(èìñùÿÿÿÿ8ÙŠ½Üğ,

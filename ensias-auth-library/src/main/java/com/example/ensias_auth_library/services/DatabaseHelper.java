@@ -4,6 +4,10 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import static com.example.ensias_auth_library.utils.AppConstants.DATABASE_NAME;
+import static com.example.ensias_auth_library.utils.AppConstants.DATABASE_VERSION;
+import static com.example.ensias_auth_library.utils.AppConstants.TABLE_GAME_STATS;
+
 /**
  * Created by younes on 8/19/2018.
  */
@@ -11,8 +15,24 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static DatabaseHelper mDatabaseInstance = null;
     private Context mContext;
-    private static final String DATABASE_NAME = "Game.db";
-    private static final int DATABASE_VERSION = 1;
+
+    private String a="id";
+    private String b="id_application";
+    private String c="id_apprenant";
+    private String d="id_accompagnant";
+    private String e="id_exercice";
+    private String f="id_niveau";
+    private String g="date_actuelle";
+    private String h="heure_debut";
+    private String i="heure_fin";
+    private String j="Nombre_operation_reuss";
+    private String k="Nombre_operation_echou";
+    private String l="minimum_temps_operation_sec";
+    private String m="moyen_temps_operation_sec";
+    private String n="longitude";
+    private String o="latitude";
+    private String p="device";
+    private String q="flag";
 
     public static DatabaseHelper getInstance(Context context){
         if (mDatabaseInstance == null){
@@ -52,6 +72,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "deleted_at TEXT," +
                 "created_at TEXT," +
                 "updated_at TEXT);");
+        db.execSQL("create table " + TABLE_GAME_STATS + "("
+                + a + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + b + " VARCHAR(100),"
+                + c + " VARCHAR(100),"
+                + d + " VARCHAR(100),"
+                + e + " VARCHAR(100),"
+                + f + " VARCHAR(100),"
+                + g + " VARCHAR(100),"
+                + h + " VARCHAR(100),"
+                + i + " VARCHAR(100),"
+                + j + " INTEGER,"
+                + k + " INTEGER,"
+                + l + " INTEGER,"
+                + m + " INTEGER,"
+                + n + " DOUBLE,"
+                + o + " DOUBLE,"
+                + p + " VARCHAR(100),"
+                + q + " BOOLEAN"
+                +")");
     }
 
     @Override

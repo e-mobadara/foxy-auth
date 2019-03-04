@@ -31,12 +31,6 @@ public class RetrofitManager {
     private RetrofitManager() {
     }
 
-//    public static RetrofitManager getInstance(Context context) {
-//        RetrofitManager instance = mInstance != null ? mInstance : (mInstance = new RetrofitManager());
-//        if (context != null)
-//            mInstance.mContextFragment = context;
-//        return instance;
-//    }
 
     public static RetrofitManager getInstance(Context context) {
         RetrofitManager instance = mInstance != null ? mInstance : (mInstance = new RetrofitManager());
@@ -93,13 +87,6 @@ public class RetrofitManager {
         call.enqueue(callback);
         return call;
     }
-
-
-//    public Call<List<CardSection>> getMainTitles(Callback<List<CardSection>> callback) {
-//        Call<List<CardSection>> call = getSecondaryAPIService().getMainTitles();
-//        call.enqueue(callback);
-//        return call;
-//    }
 
     OkHttpClient okHttpClient = new OkHttpClient().newBuilder().addInterceptor(new Interceptor() {
         @Override

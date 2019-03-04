@@ -1,10 +1,12 @@
 package com.example.ensias_auth_library.interfaces;
 
 import com.example.ensias_auth_library.models.Assignments;
+import com.example.ensias_auth_library.models.GameStat;
 import com.example.ensias_auth_library.models.UserAssignmentsRequestBody;
 import com.example.ensias_auth_library.models.UserInfo;
 import com.example.ensias_auth_library.models.UserLoginInfo;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Header;
@@ -20,4 +22,6 @@ public interface AuthEndPointInterface {
     Call<UserInfo> getUserInfo(@Body UserLoginInfo userLoginInfo);
     @POST("api/v1/userAssignments")
     Call<Assignments> getUserOrganisationAssignments(@Body UserAssignmentsRequestBody userAssignmentsRequestBody, @Header("Authorization") String authHeader);
+    @POST("99ffd541-eeab-4321-8020-3db038530f29")
+    Call<RequestBody> sendGameInfo(@Body GameStat gameStat, @Header("Authorization") String authHeader);
 }

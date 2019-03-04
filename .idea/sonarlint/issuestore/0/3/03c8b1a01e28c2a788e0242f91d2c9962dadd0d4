@@ -1,10 +1,8 @@
 
-†squid:S1450-"oRemove the "mOrganisationRecyclerViewAdapter" field and declare it as a local variable in the relevant methods.(¯‡ó¤
-usquid:S1450$"^Remove the "logoutImageView" field and declare it as a local variable in the relevant methods.(Ôõù€
-esquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(©·ƒò
-tsquid:S1450*"XRemove the "mDBHelper" field and declare it as a local variable in the relevant methods.(§•öëúÿÿÿÿ
-csquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ÕÉ£‰
-csquid:CommentedOutCodeLine«"<This block of commented-out lines of code should be removed.(„¾¸Š
-‡squid:S1450,"kRemove the "myOrganisationsLayoutManager" field and declare it as a local variable in the relevant methods.(ÆãÇˆüÿÿÿÿ
-csquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(÷ü³
-bsquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(Û÷±
+Žsquid:S14506"kRemove the "myOrganisationsLayoutManager" field and declare it as a local variable in the relevant methods.(ÆãÇˆüÿÿÿÿ8æ¬¾Ä‡-
+squid:S1450."oRemove the "mOrganisationRecyclerViewAdapter" field and declare it as a local variable in the relevant methods.(¯‡ó¤8½Ú¼Ä‡-
+|squid:UselessImportCheck"LRemove this unused import 'com.example.ensias_auth_library.models.UserInfo'.(ÎÊ–Çùÿÿÿÿ8ãÝ¡Ä‡-
+{squid:S14502"XRemove the "mDBHelper" field and declare it as a local variable in the relevant methods.(§•öëúÿÿÿÿ8ˆî½Ä‡-
+|squid:S1450*"^Remove the "logoutImageView" field and declare it as a local variable in the relevant methods.(Ôõù€8Ð¶Â‡-
+asquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8¢Ð·Ä‡-
+lsquid:MaximumInheritanceDepth$"<This class has 7 parents which is greater than 5 authorized.(©·ƒò8è¸Ñ¸’-

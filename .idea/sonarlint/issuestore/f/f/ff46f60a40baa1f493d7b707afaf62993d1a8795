@@ -1,11 +1,8 @@
 
-.squid:S21767"Rename this class.(Úª¸âùÿÿÿÿ
-gsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(±âðüÿÿÿÿ
-bsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(ü¹×ó
-Msquid:S2696o"6Make the enclosing method "static" or remove this set.(¯°÷—
-gsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(ÕŸ…Ùþÿÿÿÿ
-asquid:S1068"ERemove this unused "openedOrganisationDetailsposition" private field.(’ù½ûÿÿÿÿ
-Rsquid:S2696q"6Make the enclosing method "static" or remove this set.(ý†›Îþÿÿÿÿ
-gsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(ÓóÅºûÿÿÿÿ
+Msquid:S2696g"6Make the enclosing method "static" or remove this set.(¯°÷—
 nsquid:S1450"WRemove the "cardView" field and declare it as a local variable in the relevant methods.(õ¤öÑ
+.squid:S21767"Rename this class.(Úª¸âùÿÿÿÿ
+Rsquid:S2696i"6Make the enclosing method "static" or remove this set.(ý†›Îþÿÿÿÿ
+asquid:S1068"ERemove this unused "openedOrganisationDetailsposition" private field.(’ù½ûÿÿÿÿ
+gsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(ÓóÅºûÿÿÿÿ
 ~squid:S1488("bImmediately return this expression instead of assigning it to the temporary variable "viewHolder".(ý¸©þÿÿÿÿ
