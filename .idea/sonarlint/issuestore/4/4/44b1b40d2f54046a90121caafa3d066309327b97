@@ -1,0 +1,5 @@
+
+‡squid:S4165P"kRemove this useless assignment; "organizations" already holds the assigned value along all execution paths.(Üì«Žûÿÿÿÿ
+Psquid:S1172O"4Remove this unused method parameter "organisations".(ðØ¤ÿþÿÿÿÿ
+Esquid:S1948""/Make "organizations" transient or serializable.(å”üd
+Dsquid:S1948("-Make "enrollments" transient or serializable.(Çü®Ð
