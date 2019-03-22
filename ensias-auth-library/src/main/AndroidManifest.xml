@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".ui.activities.UserListActivity" />
         <service
-            android:name=".services.BackgroundGameService"
+            android:name=".services.bgservices.BackgroundGameService"
             android:exported="false" />
     </application>
 

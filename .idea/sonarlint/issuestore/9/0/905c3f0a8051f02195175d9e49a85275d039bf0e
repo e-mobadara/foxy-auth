@@ -1,11 +1,8 @@
 
-isquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(ŽýÂ¯8µ‚˜ý”-
-isquid:CommentedOutCodeLineu"<This block of commented-out lines of code should be removed.(»ÔÎ®8‚“ý”-
-nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(–µßàýÿÿÿÿ8µ‚˜ý”-
-nsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(žÌôýÿÿÿÿ8ó¬Þý”-
-nsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(»…Ž¸ûÿÿÿÿ8‚“ý”-
-Fsquid:S11857"(Remove this method to simply inherit it.(Î¢ŽÈ8–µÂý”-
 O
-squid:S106?"9Replace this use of System.out or System.err by a logger.(âÿÞÞ
-isquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(‚üàé8µ‚˜ý”-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö„’ˆýÿÿÿÿ8þ´ãþ”-
+squid:S106)"9Replace this use of System.out or System.err by a logger.(âÿÞÞ
+zsquid:UselessImportCheck"JRemove this unused import 'retrofit2.converter.gson.GsonConverterFactory'.(ì§¤¹ÿÿÿÿÿ8€¨Ùç™-
+‡squid:UselessImportCheck
+"]Remove this unused import 'com.example.ensias_auth_library.interfaces.AuthEndPointInterface'.(žÄám8€¨Ùç™-
+Ÿsquid:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š™¨ï8ú°­è™-
+Zsquid:UselessImportCheck"/Remove this unused import 'retrofit2.Retrofit'.(ŠÐÝ8€¨Ùç™-

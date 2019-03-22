@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import static com.example.ensias_auth_library.utils.PreferencesUtility.ACCESS_TOKEN_IN_PREF;
+import static com.example.ensias_auth_library.utils.PreferencesUtility.ACCOMPANIANT_ID;
+import static com.example.ensias_auth_library.utils.PreferencesUtility.KID_ID;
 import static com.example.ensias_auth_library.utils.PreferencesUtility.LOGGED_IN_PREF;
 import static com.example.ensias_auth_library.utils.PreferencesUtility.USER_TYPE_IN_PREF;
 
@@ -37,6 +39,11 @@ public class SaveSharedPreference {
         editor.putString(USER_TYPE_IN_PREF, userType);
         editor.apply();
     }
+    public static void setAccompaniantId(Context context, String accompaniantId) {
+        SharedPreferences.Editor editor = getPreferences(context).edit();
+        editor.putString(ACCOMPANIANT_ID, accompaniantId);
+        editor.apply();
+    }
 
 
     /**
@@ -53,5 +60,8 @@ public class SaveSharedPreference {
 
     public static String getUserType(Context context) {
         return getPreferences(context).getString(USER_TYPE_IN_PREF, null);
+    }
+    public static String getAccompaniantId(Context context) {
+        return getPreferences(context).getString(ACCOMPANIANT_ID, null);
     }
 }

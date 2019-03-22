@@ -77,13 +77,7 @@ public class KidsRecyclerViewAdapter extends RecyclerView.Adapter<KidsRecyclerVi
             kidDetailsRelativeLayout = itemView.findViewById(R.id.kid_details);
             kidParentEmailTextView = itemView.findViewById(R.id.company_email);
 
-            listViewItem.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, CrossVariables.mainActivityName);
-                    mContext.startActivity(intent);
-                }
-            });
+
 
             //offerImageView = itemView.findViewById(R.id.offre);
         }
@@ -112,9 +106,18 @@ public class KidsRecyclerViewAdapter extends RecyclerView.Adapter<KidsRecyclerVi
                     }
                 });
             }
-            else
+            else{
                 detailsImageView.setVisibility(View.GONE);
+            }
 
+            listViewItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    CrossVariables.kidId = kid.getId().toString();
+                    Intent intent = new Intent(mContext, CrossVariables.mainActivityName);
+                    mContext.startActivity(intent);
+                }
+            });
         }
     }
 

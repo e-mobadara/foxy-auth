@@ -7,4 +7,6 @@ package com.example.ensias_auth_library.utils;
 public class CrossVariables {
     public static Class mainActivityName;
     public static boolean authIsAlreadyShown = false;
+    public static String accompagnantId;
+    public static String kidId;
 }

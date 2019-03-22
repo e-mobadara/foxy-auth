@@ -9,6 +9,7 @@ import android.util.Log;
 import com.example.ensias_auth_library.models.Assignments;
 import com.example.ensias_auth_library.models.Enrollment;
 import com.example.ensias_auth_library.models.GameStat;
+import com.example.ensias_auth_library.models.Kid;
 import com.example.ensias_auth_library.models.Organisation;
 
 import java.util.ArrayList;
@@ -59,8 +60,6 @@ public class DatabaseManager {
             organisationRow.put("deleted_at", organisation.getDeletedAt());
             organisationRow.put("created_at", organisation.getCreatedAt());
             organisationRow.put("updated_at", organisation.getUpdatedAt());
-
-
             try {
                 mDatabase.insertOrThrow("organisations", null, organisationRow);
                 Log.d("Database Insertion", "Organisation Added");
@@ -167,10 +166,33 @@ public class DatabaseManager {
                 myOrganisations.add(Organisation.getOrganisationFromCursor(cursor));
             }while(cursor.moveToNext());
         }
+        return myOrganisations;
+    }
+    public List<Kid> getOrganisationKidsList(int organisationId){
+        setToReadableData();
+        List<Kid> selectedOrganisationKids = new ArrayList<>();
+        Cursor cursor = mDatabase.rawQuery("SELECT * FROM kids WHERE id_organisation = "+organisationId, null);
+        if(cursor.moveToFirst()){
+            do{
+                selectedOrganisationKids.add(Kid.getKidFromCursor(cursor));
+            }while(cursor.moveToNext());
+        }
+        return selectedOrganisationKids;
+    }
+    public List<Kid> getParentKidsList() {
+        List<Kid> selectedOrganisationKids = new ArrayList<>();
+        Cursor cursor = mDatabase.rawQuery("SELECT * FROM kids", null);
+        if(cursor.moveToFirst()){
+            do{
+                selectedOrganisationKids.add(Kid.getKidFromCursor(cursor));
+            }while(cursor.moveToNext());
+        }
+        return selectedOrganisationKids;
     }
     public int gameStatsRowCount (){
         return DatabaseHelper.getInstance(mContext).tableRowCount(TABLE_GAME_STATS);
     }
+
     private void setToWritableData(){
         mDatabase  = mDBHelper.getWritableDatabase();
     }

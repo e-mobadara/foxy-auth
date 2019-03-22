@@ -16,18 +16,17 @@ import android.view.Window;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.ensias_auth_library.R;
 import com.example.ensias_auth_library.models.Kid;
 import com.example.ensias_auth_library.models.Organisation;
-import com.example.ensias_auth_library.models.UserInfo;
-import com.example.ensias_auth_library.services.BackgroundGameService;
-import com.example.ensias_auth_library.services.DatabaseHelper;
-import com.example.ensias_auth_library.services.DatabaseManager;
-import com.example.ensias_auth_library.services.NetworkStateReceiver;
+import com.example.ensias_auth_library.services.bgservices.BackgroundGameService;
+import com.example.ensias_auth_library.services.db.DatabaseHelper;
+import com.example.ensias_auth_library.services.db.DatabaseManager;
+import com.example.ensias_auth_library.services.internet.NetworkStateReceiver;
 import com.example.ensias_auth_library.ui.adapters.KidsRecyclerViewAdapter;
 import com.example.ensias_auth_library.ui.adapters.OrganisationsRecyclerViewAdapter;
+import com.example.ensias_auth_library.utils.CrossVariables;
 import com.example.ensias_auth_library.utils.SaveSharedPreference;
 
 import java.util.ArrayList;
@@ -103,58 +102,27 @@ public class UserListActivity extends AppCompatActivity implements NetworkStateR
         else
             setParentAdapter();
 
+        // set accompagnantId
+        CrossVariables.accompagnantId = SaveSharedPreference.getAccompaniantId(getApplicationContext());
     }
 
     private void setOrganisationAdapter() {
 
-        mOrganisationRecyclerViewAdapter = new OrganisationsRecyclerViewAdapter(getOrganisationsList(),this,listener);
+        mOrganisationRecyclerViewAdapter = new OrganisationsRecyclerViewAdapter(DatabaseManager.getInstance(this).getOrganisationsList(),this,listener);
         myOrganisationsRecyclerView.setAdapter(mOrganisationRecyclerViewAdapter);
         runLayoutAnimation(myOrganisationsRecyclerView);
     }
     private void setParentAdapter() {
 
-        mKidsRecyclerViewAdapter = new KidsRecyclerViewAdapter(getParentKidsList(),this);
+        mKidsRecyclerViewAdapter = new KidsRecyclerViewAdapter(DatabaseManager.getInstance(this).getParentKidsList(),this);
         myOrganisationsRecyclerView.setAdapter(mKidsRecyclerViewAdapter);
         runLayoutAnimation(myOrganisationsRecyclerView);
-    }
-
-    private List<Kid> getParentKidsList() {
-        List<Kid> selectedOrganisationKids = new ArrayList<>();
-        Cursor cursor = mDatabase.rawQuery("SELECT * FROM kids", null);
-        if(cursor.moveToFirst()){
-            do{
-                selectedOrganisationKids.add(Kid.getKidFromCursor(cursor));
-            }while(cursor.moveToNext());
-        }
-        return selectedOrganisationKids;
-    }
-
-
-    public List<Organisation> getOrganisationsList(){
-        List<Organisation> myOrganisations = new ArrayList<>();
-        Cursor cursor = mDatabase.rawQuery("SELECT * FROM organisations", null);
-        if(cursor.moveToFirst()){
-            do{
-                myOrganisations.add(Organisation.getOrganisationFromCursor(cursor));
-            }while(cursor.moveToNext());
-        }
-        return myOrganisations;
-    }
-    public List<Kid> getOrganisationKidsList(int organisationId){
-        List<Kid> selectedOrganisationKids = new ArrayList<>();
-        Cursor cursor = mDatabase.rawQuery("SELECT * FROM kids WHERE id_organisation = "+organisationId, null);
-        if(cursor.moveToFirst()){
-            do{
-                selectedOrganisationKids.add(Kid.getKidFromCursor(cursor));
-            }while(cursor.moveToNext());
-        }
-        return selectedOrganisationKids;
     }
 
     private class OrganisationItemClickListner implements OrganisationsRecyclerViewAdapter.RecyclerViewClickListener {
         @Override
         public void onClick(View view, Organisation organisation) {
-            mKidsRecyclerViewAdapter = new KidsRecyclerViewAdapter(getOrganisationKidsList(organisation.getId()),UserListActivity.this);
+            mKidsRecyclerViewAdapter = new KidsRecyclerViewAdapter(DatabaseManager.getInstance(getApplicationContext()).getOrganisationKidsList(organisation.getId()),UserListActivity.this);
             myOrganisationsRecyclerView.setAdapter(mKidsRecyclerViewAdapter);
             runLayoutAnimation(myOrganisationsRecyclerView);
             backArrowImageView.setVisibility(View.VISIBLE);
@@ -196,13 +164,10 @@ public class UserListActivity extends AppCompatActivity implements NetworkStateR
     }
     @Override
     public void networkAvailable() {
-        DatabaseManager a = new DatabaseManager(getApplicationContext());
         Log.e("service started", "networkAvailable: service started" );
-        if(a.gameStatsRowCount()>0){
-            Log.e("service started", "networkAvailable:passed if service started" );
-            Intent i = new Intent(this, BackgroundGameService.class);
-            startService(i);
-
+        int gameStatRowCount = DatabaseManager.getInstance(getApplicationContext()).gameStatsRowCount();
+        if(gameStatRowCount>0){ // If there is data(rows) to send to the server
+            startBackgroundGameService();
         }
     }
 

@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.ensias_auth_library.interfaces.AuthEndPointInterface;
 import com.example.ensias_auth_library.models.Assignments;
+import com.example.ensias_auth_library.models.GameStat;
 import com.example.ensias_auth_library.models.UserAssignmentsRequestBody;
 import com.example.ensias_auth_library.models.UserInfo;
 import com.example.ensias_auth_library.models.UserLoginInfo;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -73,9 +75,6 @@ public class RetrofitManager {
     private AuthEndPointInterface getAPIService() {
         return getRetrofit(AppConstants.URL_ENDPOINT_PRIMARY).create(AuthEndPointInterface.class);
     }
-    private AuthEndPointInterface getSecondaryAPIService() {
-        return getRetrofit("http://ptsv2.com/t/cjd68-1534651786/").create(AuthEndPointInterface.class);
-    }
 
     public Call<UserInfo> getUserInfo(UserLoginInfo userLoginInfo, Callback<UserInfo> callback){
         Call<UserInfo> call = getAPIService().getUserInfo(userLoginInfo);
@@ -84,6 +83,11 @@ public class RetrofitManager {
     }
     public Call<Assignments> getUserAssignments(UserAssignmentsRequestBody userAssignmentsRequestBody,String Authorization, Callback<Assignments> callback){
         Call<Assignments> call = getAPIService().getUserOrganisationAssignments(userAssignmentsRequestBody,Authorization);
+        call.enqueue(callback);
+        return call;
+    }
+    public Call<RequestBody> sendGameStat(GameStat gameStat, String Authorization, Callback<RequestBody> callback){
+        Call<RequestBody> call = getAPIService().sendGameInfo(gameStat,Authorization);
         call.enqueue(callback);
         return call;
     }

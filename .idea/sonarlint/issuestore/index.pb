@@ -25,10 +25,6 @@ Zensias-auth-library/src/main/java/com/example/ensias_auth_library/api/RetrofitM
 gensias-auth-library/src/main/java/com/example/ensias_auth_library/interfaces/AuthEndPointInterface.java,4\0\4093815e52a31bd0ee3bb40bdd5cfe10a5979634
 ë
 aensias-auth-library/src/main/java/com/example/ensias_auth_library/interfaces/ResponseListner.java,8\b\8bb5875d50ee5057bef20d973d7acaee1ff952e6
-é
-^ensias-auth-library/src/main/java/com/example/ensias_auth_library/services/DatabaseHelper.java,2\4\24a3461518dae326ef2be35b5f7ab452a223e6b4
-è
-_ensias-auth-library/src/main/java/com/example/ensias_auth_library/services/DatabaseManager.java,6\c\6cb10705a6f87820f501197b853fa8741ca7e154
 â
 Yensias-auth-library/src/main/java/com/example/ensias_auth_library/models/Assignments.java,a\2\a21dedc3b1b8e68725d75b1691972cdfadaa4872
 í
@@ -91,3 +87,15 @@ p
 @ensias-auth-library/src/main/res/drawable/ic_send_black_24dp.xml,d\a\da6e874dd5047b9a86fb7760a45ec5132d8c8bd9
 Ü
 Vensias-auth-library/src/main/java/com/example/ensias_auth_library/models/UserInfo.java,4\4\44b1b40d2f54046a90121caafa3d066309327b97
+Ü
+Vensias-auth-library/src/main/java/com/example/ensias_auth_library/models/GameStat.java,6\2\62d1aece349cef7bd7dbcc85438bea18ee89e1b2
+è
+_ensias-auth-library/src/main/java/com/example/ensias_auth_library/utils/PreferencesUtility.java,a\9\a98935891116240a175202ef46ecd58a01c2b0db
+ù
+mensias-auth-library/src/main/java/com/example/ensias_auth_library/services/internet/NetworkStateReceiver.java,9\9\99b826f4e7e7f3e208a0a0287a1654b815e52272
+ë
+aensias-auth-library/src/main/java/com/example/ensias_auth_library/services/db/DatabaseHelper.java,6\4\64cbad626ce7936c70ea56beb8fc44085ba63986
+†
+pensias-auth-library/src/main/java/com/example/ensias_auth_library/services/bgservices/BackgroundGameService.java,9\0\905c3f0a8051f02195175d9e49a85275d039bf0e
+í
+bensias-auth-library/src/main/java/com/example/ensias_auth_library/services/db/DatabaseManager.java,7\8\783650f427619844684200cf4ec95b708d64258d

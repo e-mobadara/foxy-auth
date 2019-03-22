@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,10 +22,11 @@ import com.example.ensias_auth_library.models.Organisation;
 import com.example.ensias_auth_library.models.UserAssignmentsRequestBody;
 import com.example.ensias_auth_library.models.UserInfo;
 import com.example.ensias_auth_library.models.UserLoginInfo;
-import com.example.ensias_auth_library.services.DatabaseManager;
+import com.example.ensias_auth_library.services.db.DatabaseManager;
 import com.example.ensias_auth_library.utils.Logger;
 import com.example.ensias_auth_library.utils.SaveSharedPreference;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -131,20 +131,27 @@ public class LoginActivity extends AppCompatActivity {
                     SaveSharedPreference.setAccessToken(getApplicationContext(),myAccessToken);
                     SaveSharedPreference.setUserType(getApplicationContext(),myUserType);
 
+
+                    //Store Organisations and Kids In the Local Database
                     if(myUserType.equals("tutor")){
                         DatabaseManager.getInstance(getApplicationContext()).storeOrganisations(myUserInfo.getOrganizations());
                         AssignmentDataResponseTotal = myUserInfo.getOrganizations().size();
                         for(Organisation organisation : myUserInfo.getOrganizations()){
                             getOrganisationKids(organisation,myAccessToken);
                         }
+//                        SaveSharedPreference.setAccompaniantId(getApplicationContext(),myUserInfo.getOrganizations().get(0).getPivot().getUserId());
+                        setSharedPreferenceUserIdForTutor(myUserInfo);
+                        String a = SaveSharedPreference.getAccompaniantId(getApplicationContext());
                         initialiseLoadingScreen(1000*AssignmentDataResponseTotal);
 
                     }
-                    else{
+                    else{ //Parent
+//                        SaveSharedPreference.setAccompaniantId(getApplicationContext(),myUserInfo.getEnrollments().get(0).getUserId());
+                        setSharedPreferenceUserIdForParent(myUserInfo);
                         DatabaseManager.getInstance(getApplicationContext()).storeParentChildren(myUserInfo.getEnrollments());
                         goToListActivity();
                     }
-                    //Store Organisations and Kid In the Local Database
+
                 }
             }
 
@@ -160,13 +167,27 @@ public class LoginActivity extends AppCompatActivity {
             YoYo.with(Techniques.ZoomIn).duration(700)  .playOn(loadingImage);
             YoYo.with(Techniques.FadeIn).duration(1000) .playOn(myProgress);
             loadingImage.setVisibility(View.VISIBLE);
-            initialiseProgressBar(1000*AssignmentDataResponseTotal);
+            initialiseProgressBar(progressBarMaximum);
         }
         private void initialiseProgressBar(int progressBarMaximum){
             myProgress.setMax(progressBarMaximum);
             myProgress.setProgress(0);
             myProgress.setVisibility(View.VISIBLE);
         }
+        private void setSharedPreferenceUserIdForTutor(UserInfo userInfo){
+            if(userInfo.getOrganizations().isEmpty()) return;
+            SaveSharedPreference
+                    .setAccompaniantId(getApplicationContext(),
+                            userInfo
+                                    .getOrganizations().get(0).getPivot().getUserId());
+        }
+        private void setSharedPreferenceUserIdForParent(UserInfo userInfo){
+            if(userInfo.getEnrollments().isEmpty()) return;
+            SaveSharedPreference
+                    .setAccompaniantId(getApplicationContext(),
+                            userInfo.getEnrollments().get(0).getUserId());
+        }
+
 
     }
 
@@ -229,14 +250,15 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         public void onResponsesEnd() {
-            if(responsesCount()==successfulAssignmentDataResponse)
+            if(responsesCount() == successfulAssignmentDataResponse)
                 goToListActivity();
-            else if (responsesCount()==successfulAssignmentDataResponse +unsuccessfulAssignmentDataResponse){
+            else if (responsesCount() == successfulAssignmentDataResponse + unsuccessfulAssignmentDataResponse){
                 Logger.errorPring("Retreiving data from the server was not totally successful , some data is missing");
             }
         }
         public void showProgressInLog(){
             Logger.errorPring("Success Listner Count :" +successfulAssignmentDataResponse + "| Failure Listner Count : "+unsuccessfulAssignmentDataResponse +" From Total :" + responsesCount());
         }
+
     }
 }
