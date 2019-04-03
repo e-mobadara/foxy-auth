@@ -1,6 +1,12 @@
 
-[squid:S1444	"8Make this "public static authIsAlreadyShown" field final(Ηΰ§Ψύÿÿÿÿ8¨¶Νάπ,
-"squid:ClassVariableVisibilityCheck	"^Make authIsAlreadyShown a static final constant or non-public and provide accessors if needed.(Ηΰ§Ψύÿÿÿÿ8¨¶Νάπ,
-–"squid:ClassVariableVisibilityCheck"\Make mainActivityName a static final constant or non-public and provide accessors if needed.(θμρωÿÿÿÿ8Ω½άπ,
 Ysquid:S1444"6Make this "public static mainActivityName" field final(θμρωÿÿÿÿ8Ω½άπ,
+[squid:S1444	"8Make this "public static authIsAlreadyShown" field final(Ηΰ§Ψύÿÿÿÿ8¨¶Νάπ,
+–"squid:ClassVariableVisibilityCheck"\Make mainActivityName a static final constant or non-public and provide accessors if needed.(θμρωÿÿÿÿ8Ω½άπ,
 ]squid:S1118":Add a private constructor to hide the implicit public one.(ΦΓχόÿÿÿÿ8Ω½άπ,
+"squid:ClassVariableVisibilityCheck
+"ZMake accompagnantId a static final constant or non-public and provide accessors if needed.(—8σηµ»-
+†"squid:ClassVariableVisibilityCheck"QMake kidId a static final constant or non-public and provide accessors if needed.(›Òε§8γκΊ-
+Isquid:S1444"+Make this "public static kidId" field final(›Òε§8γκΊ-
+"squid:ClassVariableVisibilityCheck	"^Make authIsAlreadyShown a static final constant or non-public and provide accessors if needed.(Ηΰ§Ψύÿÿÿÿ8¨¶Νάπ,
+Rsquid:S1444
+"4Make this "public static accompagnantId" field final(—8σηµ»-

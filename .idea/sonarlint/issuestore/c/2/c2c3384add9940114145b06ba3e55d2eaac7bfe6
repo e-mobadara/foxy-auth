@@ -1,11 +1,11 @@
 
+^$squid:AssignmentInSubExpressionCheck&".Extract the assignment out of this expression.(¶ú€€
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(Âù§†˘ˇˇˇˇ8ø–¶Ëô-
+Ksquid:S1068"4Remove this unused "mContextFragment" private field.(Ó≈ÛÒ
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ú±ã‹¸ˇˇˇˇ8ø–¶Ëô-
+psquid:S00117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ò·8≈˘˙¸î-
+isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(ûÈöº8ø–¶Ëô-
 nsquid:CommentedOutCodeLine1"<This block of commented-out lines of code should be removed.(Ì¶»ﬁ˛ˇˇˇˇ8ø–¶Ëô-
 Hsquid:S1068",Remove this unused "mContext" private field.(ª˙≈æ¯ˇˇˇˇ
-nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(Âù§†˘ˇˇˇˇ8ø–¶Ëô-
-psquid:S00117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ò·8≈˘˙¸î-
 nsquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(¬çôÜ˙ˇˇˇˇ8ø–¶Ëô-
-Ksquid:S1068"4Remove this unused "mContextFragment" private field.(Ó≈ÛÒ
-isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(ûÈöº8ø–¶Ëô-
-nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(ú±ã‹¸ˇˇˇˇ8ø–¶Ëô-
-^$squid:AssignmentInSubExpressionCheck&".Extract the assignment out of this expression.(¶ú€€
 isquid:S00117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ﬂç≈Ä

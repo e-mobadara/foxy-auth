@@ -1,11 +1,12 @@
 
-Msquid:S2696l"6Make the enclosing method "static" or remove this set.(¯°÷—
-]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ÙÊÃÜð,
-nsquid:S1450"WRemove the "cardView" field and declare it as a local variable in the relevant methods.(õ¤öÑ
-gsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(ÓóÅºûÿÿÿÿ
-gsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(ÕŸ…Ùþÿÿÿÿ
-Rsquid:S2696n"6Make the enclosing method "static" or remove this set.(ÖôÛ•ýÿÿÿÿ
+gsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(ÕŸ…Ùþÿÿÿÿ
 ysquid:S1488,"bImmediately return this expression instead of assigning it to the temporary variable "viewHolder".(õ¬Ãö
-zsquid:UselessImportCheck"JRemove this unused import 'android.support.v7.widget.LinearLayoutManager'.(í™½Úúÿÿÿÿ8Êœ¨Üð,
-\squid:UselessImportCheck"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8ÔƒÅÜð,
+Msquid:S2696f"6Make the enclosing method "static" or remove this set.(¯°÷—
+Rsquid:S2696h"6Make the enclosing method "static" or remove this set.(ÖôÛ•ýÿÿÿÿ
+nsquid:S1450"WRemove the "cardView" field and declare it as a local variable in the relevant methods.(õ¤öÑ
+Tsquid:S2696t"6Make the enclosing method "static" or remove this set.(î£Á”8Ýª¹¼š-
+gsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(ÓóÅºûÿÿÿÿ
 5squid:S21769"Rename this class.(Â×žÖúÿÿÿÿ8ý¯ç×ð,
+\squid:UselessImportCheck"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8ÔƒÅÜð,
+zsquid:UselessImportCheck"JRemove this unused import 'android.support.v7.widget.LinearLayoutManager'.(í™½Úúÿÿÿÿ8Êœ¨Üð,
+]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ÙÊÃÜð,

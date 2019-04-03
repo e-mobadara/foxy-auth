@@ -1,10 +1,15 @@
 
-squid:S14500"cRemove the "progressBarAnimation" field and declare it as a local variable in the relevant methods.(­Ç­ü8ÛÄ¹Ûğ,
-qsquid:S00117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÕÎ°8ÛÄ¹Ûğ,
-Šsquid:S00116-"fRename this field "AssignmentDataResponseTotal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ü×…şÿÿÿÿ8ÛÄ¹Ûğ,
-qsquid:MaximumInheritanceDepth!"<This class has 7 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ8À¢Ğ¸’-
-lsquid:S00101o"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(°£åÊ8ÛÄ¹Ûğ,
-nsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(”Ú£ıÿÿÿÿ8ÛÄ¹Ûğ,
-csquid:S1659,"@Declare "unsuccessfulAssignmentDataResponse" on a separate line.(ï–äÙúÿÿÿÿ8ÛÄ¹Ûğ,
-nsquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(îÌ‡çıÿÿÿÿ8ÛÄ¹Ûğ,
-Msquid:S1659]"/Declare "userPasswordValue" on a separate line.(½´§ 8ÛÄ¹Ûğ,
+csquid:S1659-"@Declare "unsuccessfulAssignmentDataResponse" on a separate line.(ï–äÙúÿÿÿÿ8ÛÄ¹Ûğ,
+nsquid:CommentedOutCodeLineu"<This block of commented-out lines of code should be removed.(îÌ‡çıÿÿÿÿ8ÛÄ¹Ûğ,
+qsquid:MaximumInheritanceDepth""<This class has 7 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ8À¢Ğ¸’-
+osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(êØù°şÿÿÿÿ8™Ÿ«ºš-
+nsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(”Ú£ıÿÿÿÿ8ÛÄ¹Ûğ,
+Šsquid:S00116."fRename this field "AssignmentDataResponseTotal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ü×…şÿÿÿÿ8ÛÄ¹Ûğ,
+Msquid:S1659^"/Declare "userPasswordValue" on a separate line.(½´§ 8ÛÄ¹Ûğ,
+lsquid:S00101p"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(°£åÊ8ÛÄ¹Ûğ,
+`squid:UselessImportCheck"0Remove this unused import 'okhttp3.RequestBody'.(ıÂÂöûÿÿÿÿ8œ§–¹š-
+Jsquid:S1481"&Remove this unused "a" local variable.(‰‹ü¤ûÿÿÿÿ8ô¾±ºš-
+qsquid:S00117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÕÎ°8ƒ•¡ºš-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ş¸¡ìşÿÿÿÿ8™Ÿ«ºš-
+Ysquid:S1854"5Remove this useless assignment to local variable "a".(‰‹ü¤ûÿÿÿÿ8ô¾±ºš-
+squid:S14501"cRemove the "progressBarAnimation" field and declare it as a local variable in the relevant methods.(­Ç­ü8ÛÄ¹Ûğ,

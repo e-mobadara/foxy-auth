@@ -1,5 +1,5 @@
 
-]squid:S1118":Add a private constructor to hide the implicit public one.(µ³·ÿÿÿÿÿ8…ϊ”-
+“"squid:ClassVariableVisibilityCheck"`Make URL_ENDPOINT_PRIMARY a static final constant or non-public and provide accessors if needed.(Κοδÿÿÿÿÿ
 {squid:S3008"_Rename this field "URL_ENDPOINT_PRIMARY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Κοδÿÿÿÿÿ
 Vsquid:S1444":Make this "public static URL_ENDPOINT_PRIMARY" field final(Κοδÿÿÿÿÿ
-“"squid:ClassVariableVisibilityCheck"`Make URL_ENDPOINT_PRIMARY a static final constant or non-public and provide accessors if needed.(Κοδÿÿÿÿÿ
+]squid:S1118":Add a private constructor to hide the implicit public one.(µ³·ÿÿÿÿÿ8…ϊ”-
