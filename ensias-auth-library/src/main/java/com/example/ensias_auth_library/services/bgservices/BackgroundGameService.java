@@ -84,7 +84,7 @@ public class BackgroundGameService extends IntentService {
         gameStat.setLongitude(Double.toString(cursor.getDouble(cursor.getColumnIndex("longitude"))));
         gameStat.setLatitude(Double.toString(cursor.getDouble(cursor.getColumnIndex("latitude"))));
         gameStat.setDevice(cursor.getString(cursor.getColumnIndex("device")));
-        gameStat.setFlag(cursor.getString(cursor.getColumnIndex("flag")));
+        gameStat.setFlag(cursor.getInt(cursor.getColumnIndex("flag")));
         return gameStat;
     }
 

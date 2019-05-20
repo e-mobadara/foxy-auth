@@ -1,11 +1,11 @@
 
+[squid:UselessImportCheck "0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÏÙ¯¥•-
+dsquid:UselessImportCheck"4Remove this unused import 'android.database.Cursor'.(Ôäåúÿÿÿÿ8ÏÙ¯¥•-
+qsquid:MaximumInheritanceDepth("<This class has 7 parents which is greater than 5 authorized.(ï”È—ûÿÿÿÿ8¢¥¾•ª-
+{squid:S14506"XRemove the "mDBHelper" field and declare it as a local variable in the relevant methods.(§•öëúÿÿÿÿ8ˆî½Ä‡-
 rsquid:UselessImportCheck"GRemove this unused import 'com.example.ensias_auth_library.models.Kid'.(ºËÈ8ÏÙ¯¥•-
 |squid:S1450."^Remove the "logoutImageView" field and declare it as a local variable in the relevant methods.(Ôõù€8Ğ¶Â‡-
-{squid:S14506"XRemove the "mDBHelper" field and declare it as a local variable in the relevant methods.(§•öëúÿÿÿÿ8ˆî½Ä‡-
-¥squid:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·‰åşÿÿÿÿ8˜³üÅ”-
-qsquid:MaximumInheritanceDepth("<This class has 7 parents which is greater than 5 authorized.(ï”È—ûÿÿÿÿ8˜³üÅ”-
 squid:S14502"oRemove the "mOrganisationRecyclerViewAdapter" field and declare it as a local variable in the relevant methods.(¯‡ó¤8½Ú¼Ä‡-
-[squid:UselessImportCheck "0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÏÙ¯¥•-
 squid:S1450="kRemove the "myOrganisationsLayoutManager" field and declare it as a local variable in the relevant methods.(ÆãÇˆüÿÿÿÿ8æ¬¾Ä‡-
-Ysquid:S2696j"6Make the enclosing method "static" or remove this set.(ä€ö”ÿÿÿÿÿ8İª¹¼š-
-dsquid:UselessImportCheck"4Remove this unused import 'android.database.Cursor'.(Ôäåúÿÿÿÿ8ÏÙ¯¥•-
+Ysquid:S2696o"6Make the enclosing method "static" or remove this set.(ä€ö”ÿÿÿÿÿ8¨øØ˜­-
+¥squid:S1186´"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(·‰åşÿÿÿÿ8¨øØ˜­-

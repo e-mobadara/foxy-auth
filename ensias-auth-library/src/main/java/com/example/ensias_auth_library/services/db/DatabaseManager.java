@@ -137,7 +137,7 @@ public class DatabaseManager {
         gameStatRow.put(TABLE_GAME_STAT_ACCOMPAGNANT_ID          , gameStat.getUser_id());
         gameStatRow.put(TABLE_GAME_STAT_EXERCICE_ID              , gameStat.getExercise_id());
         gameStatRow.put(TABLE_GAME_STAT_LEVEL_ID                 , gameStat.getLevel_id());
-        gameStatRow.put(TABLE_GAME_STAT_CURRENT_DATE             , gameStat.getUpdated_at());
+        gameStatRow.put(TABLE_GAME_STAT_CURRENT_DATE             , gameStat.getGame_date_id());
         gameStatRow.put(TABLE_GAME_STAT_START_TIME               , gameStat.getCreated_at());
         gameStatRow.put(TABLE_GAME_STAT_FINISH_TIME              , gameStat.getUpdated_at());
         gameStatRow.put(TABLE_GAME_STAT_SUCCESS_OPERATIONS_NUMBER, gameStat.getSuccessful_attempts());

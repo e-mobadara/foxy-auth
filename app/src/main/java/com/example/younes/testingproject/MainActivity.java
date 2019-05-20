@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.example.ensias_auth_library.FoxyAuth;
 import com.example.ensias_auth_library.models.GameStat;
 
-import org.w3c.dom.Text;
+import java.sql.Time;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,26 +18,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FoxyAuth.emerge(this,MainActivity.class);
+
         a = findViewById(R.id.test);
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 GameStat gameStat = new GameStat();
 
-                gameStat.setApp_id("a");
-                gameStat.setExercise_id("a");
-                gameStat.setLevel_id("ab");
-                gameStat.setUpdated_at("a");
-                gameStat.setCreated_at("a");
-                gameStat.setGame_date_id("a");
-                gameStat.setSuccessful_attempts("a");
-                gameStat.setFailed_attempts("a");
-                gameStat.setMin_time_succeed_sec("a");
-                gameStat.setAvg_time_succeed_sec("a");
-                gameStat.setLongitude("a");
-                gameStat.setLatitude("a");
-                gameStat.setDevice("a");
-                gameStat.setFlag("a");
+                gameStat.setApp_id("2018_3_3_4");
+                gameStat.setExercise_id("T_6_20");
+                gameStat.setLevel_id("1");
+                gameStat.setUpdated_at(new Time(System.currentTimeMillis()).toString());
+                gameStat.setCreated_at(new Time(System.currentTimeMillis()).toString());
+                gameStat.setSuccessful_attempts("10");
+                gameStat.setFailed_attempts("11");
+                gameStat.setMin_time_succeed_sec("20");
+                gameStat.setAvg_time_succeed_sec("25");
+                gameStat.setLongitude("0.554");
+                gameStat.setLatitude("5.41141");
                 FoxyAuth.storeGameStat(MainActivity.this,gameStat);
             }
         });

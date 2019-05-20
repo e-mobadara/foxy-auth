@@ -24,8 +24,8 @@ public class GameStat {
     private String avg_time_succeed_sec;
     private String longitude;
     private String latitude;
-    private String device;
-    private String flag;
+    private String device = "test";
+    private int flag   = 0;
 
     public GameStat(){
         this.child_id = CrossVariables.kidId;
@@ -153,11 +153,11 @@ public class GameStat {
         this.device = device;
     }
 
-    public String getFlag() {
+    public int getFlag() {
         return flag;
     }
 
-    public void setFlag(String flag) {
+    public void setFlag(int flag) {
         this.flag = flag;
     }
 }

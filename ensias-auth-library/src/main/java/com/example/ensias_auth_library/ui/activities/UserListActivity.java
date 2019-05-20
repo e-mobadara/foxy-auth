@@ -62,6 +62,11 @@ public class UserListActivity extends AppCompatActivity implements NetworkStateR
     OrganisationsRecyclerViewAdapter.RecyclerViewClickListener listener;
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        startNetworkBroadcastReceiver(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +74,7 @@ public class UserListActivity extends AppCompatActivity implements NetworkStateR
         requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
         getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_user_list);
-        startNetworkBroadcastReceiver(this);
+
         mDBHelper = DatabaseHelper.getInstance(this);
         mDatabase  = mDBHelper.getWritableDatabase();
 

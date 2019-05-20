@@ -22,6 +22,6 @@ public interface AuthEndPointInterface {
     Call<UserInfo> getUserInfo(@Body UserLoginInfo userLoginInfo);
     @POST("api/v1/userAssignments")
     Call<Assignments> getUserOrganisationAssignments(@Body UserAssignmentsRequestBody userAssignmentsRequestBody, @Header("Authorization") String authHeader);
-    @POST("fcdba0dd-a6be-4046-bc97-f75542cc6d48")
+    @POST("api/v1/games")
     Call<RequestBody> sendGameInfo(@Body GameStat gameStat, @Header("Authorization") String authHeader);
 }

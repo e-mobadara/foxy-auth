@@ -99,3 +99,5 @@ aensias-auth-library/src/main/java/com/example/ensias_auth_library/services/db/D
 pensias-auth-library/src/main/java/com/example/ensias_auth_library/services/bgservices/BackgroundGameService.java,9\0\905c3f0a8051f02195175d9e49a85275d039bf0e
 ’
 bensias-auth-library/src/main/java/com/example/ensias_auth_library/services/db/DatabaseManager.java,7\8\783650f427619844684200cf4ec95b708d64258d
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
