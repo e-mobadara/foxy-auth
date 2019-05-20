@@ -43,18 +43,17 @@ Replace MainActivity with the first activity that runs on your App.
 to store a new game registry you can create an instance of the object GameStat
 ```
 GameStat gameStat = new GameStat();
-
-        gameStat.setApp_id("a");
-        gameStat.setExercise_id("a");
-        gameStat.setLevel_id("a");
-        gameStat.setUpdated_at("a");
-        gameStat.setCreated_at("a");
-        gameStat.setSuccessful_attempts("a");
-        gameStat.setFailed_attempts("a");
-        gameStat.setMin_time_succeed_sec("a");
-        gameStat.setAvg_time_succeed_sec("a");
-        gameStat.setLongitude("a");
-        gameStat.setLatitude("a");
+        gameStat.setApp_id("2018_3_3_4");
+        gameStat.setExercise_id("T_6_20");
+        gameStat.setLevel_id("1");
+        gameStat.setUpdated_at("00:05:30");
+        gameStat.setCreated_at("00:04:01");
+        gameStat.setSuccessful_attempts("1");
+        gameStat.setFailed_attempts("11");
+        gameStat.setMin_time_succeed_sec("50");
+        gameStat.setAvg_time_succeed_sec("58");
+        gameStat.setLongitude("11.2555");
+        gameStat.setLatitude("-2.55547");
         FoxyAuth.storeGameStat(this,gameStat);
 ```
 ## Having an issue?
