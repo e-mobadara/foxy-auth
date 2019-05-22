@@ -62,6 +62,7 @@ public class BackgroundGameService extends IntentService {
                 db.execSQL("DELETE FROM "+ TABLE_GAME_STATS +" Where date_actuelle = '"+ gameStat.updated_at+"' AND heure_debut = '"+ gameStat.created_at+"'");
                 cursor.moveToNext();
             }
+            db.execSQL("DELETE FROM " + TABLE_GAME_STATS);
 
 
         }

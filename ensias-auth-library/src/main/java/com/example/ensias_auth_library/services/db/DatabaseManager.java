@@ -82,7 +82,7 @@ public class DatabaseManager {
         if (mDatabase != null){
             //prepare the transaction information that will be saved to the database
             ContentValues kidRow = new ContentValues();
-            kidRow.put("id", assignment.getId());
+            kidRow.put("id", assignment.getKid().getId());
 
             kidRow.put("id_organisation", assignment.getOrganisationId());
 
@@ -98,7 +98,7 @@ public class DatabaseManager {
 
             try {
                 mDatabase.insertOrThrow("kids", null, kidRow);
-                Log.d("Database Insertion", "Kid ("+assignment.getId()+") Added");
+                Log.d("Database Insertion", "Kid ("+assignment.getKid().getId()+") Added");
 
             } catch (Exception e) {
                 Log.e("Database Insertion", "Error " + e.getCause() + " " + e.getMessage());
