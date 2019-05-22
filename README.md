@@ -23,7 +23,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```
 dependencies {
-	        implementation 'com.github.e-mobadara:foxy-auth:v0.2.1-beta'
+	        implementation 'com.github.e-mobadara:foxy-auth:v0.2.2'
 	}
 ```
 
@@ -41,14 +41,16 @@ Replace MainActivity with the first activity that runs on your App.
 
 ## Adding new game stat (Game_Infos)
 to store a new game registry you can create an instance of the object GameStat
+
 ```
         GameStat gameStat = new GameStat();
+
 
         gameStat.setApp_id("2018_3_3_4");
         gameStat.setExercise_id("T_6_20");
         gameStat.setLevel_id("1");
-        gameStat.setUpdated_at("00:05:30");
-        gameStat.setCreated_at("00:04:01");
+        gameStat.setUpdated_at("2019-05-10 23:38:31");
+        gameStat.setCreated_at("2019-05-10 23:40:00");
         gameStat.setSuccessful_attempts("1");
         gameStat.setFailed_attempts("11");
         gameStat.setMin_time_succeed_sec("50");
